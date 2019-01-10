@@ -1,0 +1,66 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon" *ngIf="isShowIcon_1">
+                            <i class="material-icons">lightbulb_outline</i>
+                        </div>
+                        <p class="card-category font-weight-bold">Đèn Số: 1</p>
+                        <div *ngIf="!isShowIcon_1">
+                            <p class="card-category">Trạng Thái: Tắt</p>
+                        </div>
+                        <div *ngIf="isShowIcon_1">
+                            <p class="card-category">Trạng Thái: Bật</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <button mat-raised-button class="mr-3" (click)="isShowIcon_1 = true" (click)="led1_On()">Bật</button>
+                        <button mat-raised-button (click)="isShowIcon_1 = false" (click)="led1_Off()">Tắt</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon" *ngIf="isShowIcon_2">
+                            <i class="material-icons">lightbulb_outline</i>
+                        </div>
+                        <p class="card-category font-weight-bold">Đèn Số: 2</p>
+                        <div *ngIf="!isShowIcon_2">
+                            <p class="card-category">Trạng Thái: Tắt</p>
+                        </div>
+                        <div *ngIf="isShowIcon_2">
+                            <p class="card-category">Trạng Thái: Bật</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <button mat-raised-button class="mr-3" (click)="isShowIcon_2 = true" (click)="led2_On()">Bật</button>
+                        <button mat-raised-button (click)="isShowIcon_2 = false" (click)="led2_Off()">Tắt</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon" *ngIf="isShowIcon_All">
+                            <i class="material-icons">lightbulb_outline</i>
+                        </div>
+                        <p class="card-category font-weight-bold">Bật Tất Cả Các Đèn</p>
+                        <div *ngIf="!isShowIcon_All">
+                            <p class="card-category">Trạng Thái: Tắt</p>
+                        </div>
+                        <div *ngIf="isShowIcon_All">
+                            <p class="card-category">Trạng Thái: Bật</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <button mat-raised-button class="mr-3" (click)="isShowIcon_All = true" (click)="ledAll_On()">Bật</button>
+                        <button mat-raised-button (click)="isShowIcon_All = false" (click)="ledAll_Off()">Tắt</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title ">Nhiệt Độ</h4>
+                        <p class="card-category">Danh sách thể hiện giá trị của nhiệt độ</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        STT
+                                    </th>
+                                    <th>
+                                        Thởi Gian
+                                    </th>
+                                    <th>
+                                        Tiêu Đề
+                                    </th>
+                                    <th>
+                                        Giá Trị
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr  *ngFor="let item of  sensorTemp;let i = index">
+                                        <td>
+                                            {{i+1}}
+                                        </td>
+                                        <td>
+                                            {{item.time}}
+                                        </td>
+                                        <td>
+                                            {{item.topic}}
+                                        </td>
+                                        <td>
+                                            {{item.value}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title ">Độ Ẩm</h4>
+                        <p class="card-category">Danh sách thể hiện giá trị của độ ẩm</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        STT
+                                    </th>
+                                    <th>
+                                        Thời Gian
+                                    </th>
+                                    <th>
+                                        Tiểu Đề
+                                    </th>
+                                    <th>
+                                        Giá Trị
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr  *ngFor="let item of  sensorHumi;let i = index">
+                                        <td>
+                                            {{i+1}}
+                                        </td>
+                                        <td>
+                                            {{item.time}}
+                                        </td>
+                                        <td>
+                                            {{item.topic}}
+                                        </td>
+                                        <td>
+                                            {{item.value}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Khí Ga</h4>
+                        <p class="card-category">Danh sách thể hiện giá trị của khí ga</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        STT
+                                    </th>
+                                    <th>
+                                        Thời Gian
+                                    </th>
+                                    <th>
+                                        Tiêu Đề
+                                    </th>
+                                    <th>
+                                        Giá Trị
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr  *ngFor="let item of  sensorGas;let i = index">
+                                        <td>
+                                            {{i+1}}
+                                        </td>
+                                        <td>
+                                            {{item.time}}
+                                        </td>
+                                        <td>
+                                            {{item.topic}}
+                                        </td>
+                                        <td>
+                                            {{item.value}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

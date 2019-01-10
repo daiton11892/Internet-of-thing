@@ -1,0 +1,108 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <!-- Cart -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="fa fa-thermometer-half"></i>
+                        </div>
+                        <p class="card-category">Nhiệt Độ</p>
+                        <h3 class="card-title">{{oneTemp.value}}
+                            <small>°C</small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">cloud</i>
+                        </div>
+                        <p class="card-category">Độ Ẩm</p>
+                        <h3 class="card-title">{{oneHumi.value}}
+                            <small>%</small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                            <i class="fa fa-tachometer"></i>
+                        </div>
+                        <p class="card-category">Khí Ga</p>
+                        <h3 class="card-title">{{oneGas.value}}
+                            <small>VOLT</small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chart -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-warning">
+                        <div class="ct-chart" id="TempChart"></div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Biểu Đồ Nhiệt Độ</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-success">
+                        <div class="ct-chart" id="HumiChart"></div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Biểu Đồ Độ Ẩm</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-danger">
+                        <div class="ct-chart" id="GasChart"></div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Biểu Đồ Khí Ga</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Cart total -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title font-weight-bold">Cảm Biến</h3>
+                        <p class="card-category">Bảng danh sách thể hiện toàn bộ giá trị của cảm biến</p>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <th>STT</th>
+                                <th>Thời Gian</th>
+                                <th>Tiểu Đề</th>
+                                <th>Giá Trị</th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of allSensor, let i = index">
+                                    <td>{{i+1}}</td>
+                                    <td>{{item.time}}</td>
+                                    <td>{{item.topic}}</td>
+                                    <td>{{item.value}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
