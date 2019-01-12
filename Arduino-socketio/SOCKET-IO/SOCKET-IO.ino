@@ -1,14 +1,12 @@
+//Khai báo thư viện SocketIO và WiFi
 #include <SocketIOClient.h>
 #include <WiFiClient.h>
-#include <DHT.h>
 
-#define wifi_ssid "Vuong_Ton"
-#define wifi_password "12345@ton"
+#define wifi_ssid "utc2hcm"
+#define wifi_password "12345678"
 
 #define LedPin_1 2
 #define LedPin_2 12
-#define DHTTYPE DHT11
-#define DHTPIN  4
 
 // Server Ip
 String host = "10.10.0.1";
@@ -18,6 +16,7 @@ int port = 8000;
 // Khởi tạo socket
 SocketIOClient socket;
 
+// Kết nối wifi
 void setup_wifi() {
   delay(10);
   Serial.println();

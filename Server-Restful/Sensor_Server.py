@@ -5,6 +5,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
+#Khai báo đường dẫn MongoDB
 app.config['MONGO_DBNAME'] = 'mydb'
 app.config['MONGO_URI'] = 'mongodb://10.10.0.1:27017/mydb'
 

@@ -1,5 +1,5 @@
+// Khai báo thư viện Wifi,DHT và MQTT, 
 #include <ESP8266WiFi.h>
-// Khai báo thư viện
 #include <PubSubClient.h>
 #include <DHT.h>
 
@@ -24,13 +24,14 @@
 #define temperature_topic "Temp"
 #define gas_topic "Gas"
 
-
 #define DHTTYPE DHT11
+// Chân cắm trên Arduino Wemos
 #define DHTPIN  4
 #define DOPin 2
 #define ledPin 13
 #define sensorPin A0
 
+//Khai báo tên thiết bị kết nối MQTT
 #define client_name "Client_1"
 
 WiFiClient espClient;
@@ -98,7 +99,7 @@ void loop() {
       float newTemp = dht.readTemperature();
       float newHum = dht.readHumidity();
       int newGas = analogRead(sensorPin);
-      
+      // Đọc dữ liệu trên sensor và gửi lên MQTT Broker
       temp = newTemp;
       Serial.print("New temperature:");
       Serial.println(String(temp).c_str());
@@ -109,7 +110,7 @@ void loop() {
       Serial.println(String(hum).c_str());
       client.publish(humidity_topic, String(hum).c_str(), true);
 
-      // read the value from the sensor:
+      
       gas = newGas;
       Serial.print("New gas:");
       Serial.println(String(gas).c_str());
