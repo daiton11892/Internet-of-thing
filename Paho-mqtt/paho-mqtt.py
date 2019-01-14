@@ -31,8 +31,8 @@ def on_message(client, userdata, msg):
 
 # Set up client for MongoDB
 client=MongoClient('localhost', 27017)
-db=client.DataTest
-collection=db.datatest
+db=client.mydb
+collection=db.mycol
 
 # Initialize the client that should connect to the Mosquitto broker
 client = mqtt.Client()
