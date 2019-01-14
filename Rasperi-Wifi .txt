@@ -6,7 +6,7 @@ Chuẩn bị: - Thẻ nhớ 16gb --> 32gb.
 
 Mờ giao thức interfacing options: SSH và VNC.
 
-Set ip tĩnh cho raspberry: 192.168.13.4/24 - interface
+Set ip tĩnh cho raspberry: 192.168.0.77/24 - interface
 
 Set pass: - sudo passwb root :utc2hcm
 
@@ -25,7 +25,7 @@ sudo nano /etc/dhcp/dhcpd.conf
 subnet 10.10.0.0 netmask 255.255.255.0{
 range 10.10.0.25 10.10.0.150;
 option domain-name-servers 8.8.4.4;
-option routers 10.10.0.1;
+option routers 10.10.0.1;r
 interface wlan0;
 }
 
@@ -34,30 +34,18 @@ sudo nano /etc/hostapd/hostapd.conf
 	
 interface=wlan0
 driver=nl80211
-ssid=group_12
+ssid=utc2hcm
 hw_mode=g
 channel=11
 ignore_broadcast_ssid=0
-wpa=0
-wpa_passphrase=khoangoc
+wpa=1
+wpa_passphrase=12345678
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
 macaddr_acl=0
 
-4. Configure IP static 
-sudo nano /etc/network/interfaces
-
-auto lo
-iface lo inet loopback
-
-auto eth0
-allow-hotplug eth0
-iface eth0 inet manual
-
-auto wlan0
-
-5. Start Wifi
+4. Start Wifi
 + Set ip for wlan0
 sudo ifconfig wlan0 10.10.0.1 netmask 255.255.255.0
 + Start DHCP server
@@ -68,13 +56,13 @@ sudo hostapd -d /etc/hostapd/hostapd.conf
 +Reboot 
 sudo reboot
 
-6.Nat 
-/etc/sysctl.conf
+5.Nat 
+sudo nano /etc/sysctl.conf
 net.ipv4.ip_forward=1
 
 sudo iptables -t nat -A  POSTROUTING -o eth0 -j MASQUERADE
 
-7. Tự động restart wifi
+6. Tự động restart wifi
 sudo nano /etc/rc.local
 #set static wlan0
 sudo ifconfig wlan0 10.10.0.1 netmask 255.255.255.0
