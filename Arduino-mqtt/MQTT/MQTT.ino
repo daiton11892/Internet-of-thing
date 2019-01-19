@@ -93,7 +93,7 @@ void loop() {
     }
     client.loop();
     long now = millis();
-    if (now - lastMsg > 60000) {
+    if (now - lastMsg > 15000) {
       lastMsg = now;
 
       float newTemp = dht.readTemperature();

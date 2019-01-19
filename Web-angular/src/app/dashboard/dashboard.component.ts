@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
   constructor(private _sensor: SensorService) {
     setTimeout(function () {
       window.location.reload();
-    }, 30000);
+    }, 15000);
   }
 
   startAnimationForLineChart(chart) {
@@ -95,7 +95,6 @@ export class DashboardComponent implements OnInit {
           this.valueArrHumi.push(i.value);
           this.valueTimeHumi.push(i.time);
         }
-        console.log(this.valueTimeHumi)
       },
       err => {
         console.log(err);

@@ -614,19 +614,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!********************************************************************************************************************************************!*\
   !*** multi ./node_modules/perfect-scrollbar/css/perfect-scrollbar.css ./src/assets/scss/material-dashboard.scss ./src/assets/css/demo.css ***!
   \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Vuong_Ton\Desktop\test_connectUNO_wifi\Demo-Angular-IOT\node_modules\perfect-scrollbar\css\perfect-scrollbar.css */"./node_modules/perfect-scrollbar/css/perfect-scrollbar.css");
-__webpack_require__(/*! C:\Users\Vuong_Ton\Desktop\test_connectUNO_wifi\Demo-Angular-IOT\src\assets\scss\material-dashboard.scss */"./src/assets/scss/material-dashboard.scss");
-module.exports = __webpack_require__(/*! C:\Users\Vuong_Ton\Desktop\test_connectUNO_wifi\Demo-Angular-IOT\src\assets\css\demo.css */"./src/assets/css/demo.css");
+__webpack_require__(/*! D:\IoT\Internet-of-thing\Web-angular\node_modules\perfect-scrollbar\css\perfect-scrollbar.css */"./node_modules/perfect-scrollbar/css/perfect-scrollbar.css");
+__webpack_require__(/*! D:\IoT\Internet-of-thing\Web-angular\src\assets\scss\material-dashboard.scss */"./src/assets/scss/material-dashboard.scss");
+module.exports = __webpack_require__(/*! D:\IoT\Internet-of-thing\Web-angular\src\assets\css\demo.css */"./src/assets/css/demo.css");
 
 
 /***/ })
 
-},[[2,"runtime"]]]);
+},[[3,"runtime"]]]);
 //# sourceMappingURL=styles.js.map
